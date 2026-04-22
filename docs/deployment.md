@@ -23,13 +23,19 @@ Upload the `dist/` folder to **Vercel**, **Netlify**, **Cloudflare Pages**, **Gi
 
 ## Contact Form Backend
 
-The SPA posts JSON to `VITE_CONTACT_API_URL` when set. The expected request body matches `ContactFormValues` in `src/lib/schemas/contact.ts` (`name`, `email`, `subject`, `message`).
+The SPA posts JSON to `VITE_CONTACT_API_URL` when set, and otherwise falls back to `/api/contact`. The expected request body matches `ContactFormValues` in `src/lib/schemas/contact.ts` (`name`, `email`, `subject`, `message`).
 
 ### Option A: Vercel Serverless Endpoint
 
-1. Create a route such as `api/contact.ts` with a `POST` handler that validates the request body and forwards the message using **Resend**, **SendGrid**, or another email provider.
-2. In Vercel Project Settings, add the server-side secrets your email provider needs.
-3. Set `VITE_CONTACT_API_URL` to `https://<your-vercel-domain>/api/contact` before the production build runs.
+Recommended setup for this repo:
+
+1. Add `api/contact.ts` to handle `POST /api/contact`.
+2. Create a Resend API key and store it as `RESEND_API_KEY` in Vercel Project Settings.
+3. Set `CONTACT_TO_EMAIL` to your inbox if you want to override the default address in `src/content/site.ts`.
+4. Optionally set `CONTACT_FROM_EMAIL` to a verified sender like `Sujai Portfolio <onboarding@resend.dev>`.
+5. Keep `VITE_CONTACT_API_URL` as `/api/contact` for production.
+
+The API route validates the request, formats a professional email body, and sends the submission to your inbox through Resend.
 
 ### Option B: Netlify Function
 
@@ -51,7 +57,7 @@ Use **Formspree**, **Getform**, or **Web3Forms**: set their endpoint as `VITE_CO
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` locally. For CI/CD, configure `VITE_CONTACT_API_URL` in your host’s environment variables **before** `npm run build` so Vite inlines the value.
+Copy `.env.example` to `.env` locally. For CI/CD, configure `VITE_CONTACT_API_URL`, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, and `CONTACT_FROM_EMAIL` in your host’s environment variables before deploying.
 
 ## Security Notes
 

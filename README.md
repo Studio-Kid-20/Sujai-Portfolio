@@ -33,11 +33,12 @@ npm run dev
 - `src/components/`: layout, UI, and section components.
 - `src/content/`: reusable portfolio text and structured content.
 - `src/lib/`: form helpers and shared utilities.
-- `scripts/generate-icons.mjs`: local generator for the SVG icon archive and sprite.
 
 ## Environment
 
 Copy `.env.example` to `.env` and set `VITE_CONTACT_API_URL` if you want the contact form to post to a backend or form service.
+
+For production contact email delivery, configure `RESEND_API_KEY` on the host and keep the API route enabled at `/api/contact`.
 
 ## Deployment
 
