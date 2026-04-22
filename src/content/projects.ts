@@ -1,4 +1,4 @@
-import type { DesignTile, Project, SkillCategory } from "./types";
+import type { DesignTile, Project, SkillCategory } from "./types.js";
 
 export const devProjects: Project[] = [
   {

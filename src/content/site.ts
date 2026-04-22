@@ -1,4 +1,4 @@
-import type { NavItem, SocialLink } from "./types";
+import type { NavItem, SocialLink } from "./types.js";
 
 export const SITE_NAME = "Sujai";
 /** All-caps wordmark in the site header / navbar. */
