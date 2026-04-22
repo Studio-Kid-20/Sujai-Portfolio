@@ -8,7 +8,7 @@ This repository showcases a personal brand experience focused on immersive visua
 
 - `src/`: application source code, routes, UI components, and content data.
 - `public/`: static assets served directly by Vite.
-- `assets/`: a curated archive of the site images and icon files used in the current build.
+- `assets/`: a curated archive of the site images and favicon used in the current build.
 - `docs/deployment.md`: deployment notes for Vercel and other static hosts.
 - `docs/reference-html/`: older HTML reference pages kept for comparison and inspiration.
 - `docs/design-previews/`: desktop and mobile design screenshots for review.

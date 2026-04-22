@@ -1,6 +1,6 @@
 # Assets Archive
 
-This folder mirrors the images and icon files that power the current website.
+This folder mirrors the images and favicon used by the current website.
 
 ## Images
 
