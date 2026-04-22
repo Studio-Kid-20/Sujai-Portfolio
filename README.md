@@ -2,6 +2,8 @@
 
 Personal portfolio site built with React, TypeScript, Vite, and Tailwind CSS.
 
+This repository showcases a personal brand experience focused on immersive visuals, polished front-end execution, and a portfolio structure that is easy to maintain, review, and deploy. It combines production-ready React code, reusable content modules, curated static assets, and supporting design references so collaborators can quickly understand both the final site and the creative process behind it.
+
 ## What Is In This Repo
 
 - `src/`: application source code, routes, UI components, and content data.

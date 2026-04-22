@@ -10,6 +10,8 @@ export const devProjects: Project[] = [
     imageSrc: "/assets/project-marketplace.jpg",
     imageAlt: "Marketplace-style dashboard preview with polished card layouts",
     liveUrl: "mailto:ds.sujais2010@gmail.com?subject=Code-Commerce%20Marketplace%20Demo",
+    repoUrl: "https://github.com/Studio-Kid-20",
+    repoLabel: "GitHub Profile",
   },
   {
     id: "vision-into-vector",
@@ -32,6 +34,8 @@ export const devProjects: Project[] = [
     imageSrc: "/assets/project-calculator.jpg",
     imageAlt: "Experimental interface study with neon accents and bold contrast",
     liveUrl: "/designs",
+    repoUrl: "https://github.com/Studio-Kid-20",
+    repoLabel: "GitHub Profile",
   },
 ];
 

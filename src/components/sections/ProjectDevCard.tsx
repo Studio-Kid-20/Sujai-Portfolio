@@ -20,7 +20,7 @@ export function ProjectDevCard({ project }: ProjectDevCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-container-high/80 to-transparent" />
       </div>
-      <div className="p-8">
+      <div className="flex min-h-[21rem] flex-col p-8">
         <div className="mb-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
@@ -36,7 +36,7 @@ export function ProjectDevCard({ project }: ProjectDevCardProps) {
           {project.description}
         </p>
         {hasLive || hasRepo ? (
-          <div className="flex gap-4">
+          <div className="mt-auto flex gap-4 pt-6">
             {hasLive ? (
               <a
                 href={project.liveUrl}
@@ -55,12 +55,12 @@ export function ProjectDevCard({ project }: ProjectDevCardProps) {
                 aria-label={`${project.title} source code`}
               >
                 <MaterialIcon name="code" className="text-white light:text-slate-900" />
-                {project.repoLabel ?? "Source"}
+                {project.repoLabel ?? "GitHub Profile"}
               </a>
             ) : null}
           </div>
         ) : (
-          <p className="text-sm font-medium text-tertiary">Case study details available on request.</p>
+          <p className="mt-auto pt-6 text-sm font-medium text-tertiary">Case study details available on request.</p>
         )}
       </div>
     </article>
