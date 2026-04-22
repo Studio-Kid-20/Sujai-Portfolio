@@ -33,6 +33,7 @@ npm run dev
 - `src/components/`: layout, UI, and section components.
 - `src/content/`: reusable portfolio text and structured content.
 - `src/lib/`: form helpers and shared utilities.
+- `scripts/generate-icons.mjs`: local generator for the SVG icon archive and sprite.
 
 ## Environment
 
