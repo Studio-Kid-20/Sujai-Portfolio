@@ -77,9 +77,6 @@ export function HomePage() {
                   <p className="rounded-2xl bg-white/5 px-4 py-3 light:bg-slate-100">
                     Browser-built layouts with a visual artist's mindset.
                   </p>
-                  <p className="rounded-2xl bg-white/5 px-4 py-3 light:bg-slate-100">
-                    Learning in public while balancing school and self-driven work.
-                  </p>
                 </div>
                 <div className="mt-auto flex items-center justify-between">
                   <div className="flex -space-x-2">

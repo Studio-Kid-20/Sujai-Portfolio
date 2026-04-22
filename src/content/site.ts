@@ -1,8 +1,8 @@
 import type { NavItem, SocialLink } from "./types";
 
-export const SITE_NAME = "DS Sujai";
+export const SITE_NAME = "Sujai";
 /** All-caps wordmark in the site header / navbar. */
-export const SITE_NAV_BRAND = "DS SUJAI";
+export const SITE_NAV_BRAND = "SUJAI";
 export const SITE_TAGLINE = "Vision Into Vector";
 
 export const HOME_HERO_BADGE = "11th-Grade Developer & Imagery Artist";
@@ -45,7 +45,7 @@ export const FOOTER_BLURB =
   "Imagery-first thinking, browser-built execution, and a student builder mindset focused on shipping work that feels alive.";
 
 /** Short browser title for the home route (tab + SEO). */
-export const HOME_DOCUMENT_TITLE = "DS Sujai | Vision Into Vector";
+export const HOME_DOCUMENT_TITLE = "Sujai | Vision Into Vector";
 
 /** Page-specific hero / browser titles (one phrase per main page). */
 export const PAGE_TAGLINE_BY_PATH: Record<string, string> = {
@@ -106,4 +106,4 @@ export const contactMeta = {
   location: "India / Remote-friendly",
 };
 
-export const copyrightLine = "© 2026 DS Sujai. Built with React, TypeScript, and Tailwind.";
+export const copyrightLine = "© 2026 Sujai. Built with React, TypeScript, and Tailwind.";

@@ -1,4 +1,4 @@
-# DS Sujai Portfolio
+# Sujai Portfolio
 
 Personal portfolio site built with React, TypeScript, Vite, and Tailwind CSS.
 
