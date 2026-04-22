@@ -10,7 +10,8 @@ export type ContactSubmitResult =
  * See docs/deployment.md for hosting patterns.
  */
 export async function submitContactForm(data: ContactFormValues): Promise<ContactSubmitResult> {
-  const url = import.meta.env.VITE_CONTACT_API_URL ?? "/api/contact";
+  const configuredUrl = import.meta.env.VITE_CONTACT_API_URL?.trim();
+  const url = configuredUrl ? configuredUrl : "/api/contact";
 
   try {
     const res = await fetch(url, {
