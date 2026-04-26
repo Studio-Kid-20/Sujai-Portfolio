@@ -31,6 +31,7 @@ export default function MagneticButton({ children, className, onClick }: Props) 
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
+      onClick={onClick}
       animate={{ x, y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={className}

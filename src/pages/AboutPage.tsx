@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { ABOUT_HIGHLIGHTS, ABOUT_STORY, EXPERIENCE_HIGHLIGHT } from "@/content/site";
 import { Reveal } from "@/components/ui/Reveal";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { MaterialIcon } from "@/components/ui/MaterialIcon";
 
 const workspaceImg = "/assets/about-studio.jpg";
 
@@ -96,5 +96,4 @@ export function AboutPage() {
   );
 }
 
-import { MaterialIcon } from "@/components/ui/MaterialIcon";
 
