@@ -89,11 +89,11 @@ export const InnovationFlow = () => {
             })}
           </svg>
 
-          {/* Central Sujai Hub - Perfected Geometry */}
+          {/* Central Sujai Hub - Perfected Geometry with Hover Blink */}
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            className="group relative z-20 flex h-48 w-48 items-center justify-center"
+            className="group relative z-20 flex h-48 w-48 items-center justify-center cursor-pointer"
           >
             {/* Symmetrical Orbit Rings */}
             <motion.div 
@@ -107,8 +107,22 @@ export const InnovationFlow = () => {
               className="absolute -inset-4 rounded-full border border-primary/10 border-dashed"
             />
 
+            {/* Hub Hover Glow - Long Blink Animation */}
+            <motion.div
+              whileHover={{ 
+                opacity: [0.2, 0.8, 0.2],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              className="absolute inset-0 rounded-[3rem] bg-primary/20 blur-[40px] opacity-0"
+            />
+
             {/* Core Chip - Clean & Solid */}
-            <div className="relative flex h-36 w-36 items-center justify-center rounded-[2.5rem] border-2 border-white/10 bg-neutral-950 shadow-[0_0_80px_rgba(182,160,255,0.15)]">
+            <div className="relative flex h-36 w-36 items-center justify-center rounded-[2.5rem] border-2 border-white/10 bg-neutral-950 shadow-[0_0_80px_rgba(182,160,255,0.15)] transition-all group-hover:border-primary/40 group-hover:shadow-[0_0_100px_rgba(182,160,255,0.3)]">
               <div className="flex flex-col items-center">
                 <span className="font-label text-[9px] font-black uppercase tracking-[0.6em] text-primary/80 mb-1">CORE</span>
                 <span className="font-headline text-3xl font-black tracking-tight text-white">SUJAI</span>
@@ -124,17 +138,9 @@ export const InnovationFlow = () => {
                 </div>
               </div>
             </div>
-
-            {/* Hub Hardware Connectors (Symmetrical Pins) */}
-            <div className="absolute -left-3 top-1/2 flex -translate-y-1/2 flex-col gap-4">
-              {[...Array(5)].map((_, i) => <div key={i} className="h-1.5 w-4 rounded-full bg-white/20" />)}
-            </div>
-            <div className="absolute -right-3 top-1/2 flex -translate-y-1/2 flex-col gap-4">
-              {[...Array(5)].map((_, i) => <div key={i} className="h-1.5 w-4 rounded-full bg-white/20" />)}
-            </div>
           </motion.div>
 
-          {/* Peripheral Node Cards - Pixel Perfect Placement */}
+          {/* Peripheral Node Cards - Pixel Perfect Placement with Hover Glow */}
           {NODES.map((node, i) => (
             <motion.div
               key={node.id}
@@ -148,13 +154,16 @@ export const InnovationFlow = () => {
                 left: `calc(600px + ${node.x}px)`,
                 transform: "translate(-50%, -50%)"
               }}
-              className="z-30 group"
+              className="z-30 group cursor-pointer"
             >
-              <div className="relative flex h-24 w-24 flex-col items-center justify-center rounded-[2.5rem] border border-white/10 bg-neutral-900/60 shadow-xl backdrop-blur-2xl transition-all duration-300 group-hover:border-primary/60 group-hover:bg-neutral-900/90 group-hover:shadow-[0_0_40px_rgba(182,160,255,0.2)]">
-                <span className="font-label text-[12px] font-black uppercase tracking-[0.2em] text-white">
+              <div className="relative flex h-24 w-24 flex-col items-center justify-center rounded-[2.5rem] border border-white/10 bg-neutral-900/60 shadow-xl backdrop-blur-2xl transition-all duration-300 group-hover:border-primary/60 group-hover:bg-neutral-900/90 group-hover:shadow-[0_0_60px_rgba(182,160,255,0.4)]">
+                {/* Internal Glow Effect on Hover */}
+                <div className="absolute inset-0 rounded-[2.5rem] bg-primary/5 opacity-0 transition-opacity group-hover:opacity-100" />
+                
+                <span className="relative z-10 font-label text-[12px] font-black uppercase tracking-[0.2em] text-white">
                   {node.label}
                 </span>
-                <div className="mt-2 h-0.5 w-6 rounded-full bg-primary/30" />
+                <div className="relative z-10 mt-2 h-0.5 w-6 rounded-full bg-primary/30 group-hover:bg-primary transition-colors" />
               </div>
             </motion.div>
           ))}
