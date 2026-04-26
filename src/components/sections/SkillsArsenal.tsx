@@ -2,6 +2,7 @@ import type { SkillCategory } from "@/content/types";
 import { skillCategories } from "@/content/projects";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
+import { motion } from "framer-motion";
 
 const accentBar: Record<SkillCategory["accent"], string> = {
   primary: "bg-primary",
@@ -10,9 +11,9 @@ const accentBar: Record<SkillCategory["accent"], string> = {
 };
 
 const accentBorder: Record<SkillCategory["accent"], string> = {
-  primary: "hover:border-primary/30",
-  secondary: "hover:border-secondary/30",
-  tertiary: "hover:border-tertiary/30",
+  primary: "hover:border-primary/50 hover:shadow-[0_0_30px_rgba(182,160,255,0.2)]",
+  secondary: "hover:border-secondary/50 hover:shadow-[0_0_30px_rgba(255,108,149,0.2)]",
+  tertiary: "hover:border-tertiary/50 hover:shadow-[0_0_30px_rgba(129,236,255,0.2)]",
 };
 
 const accentBadge: Record<SkillCategory["accent"], string> = {
@@ -22,45 +23,53 @@ const accentBadge: Record<SkillCategory["accent"], string> = {
 };
 
 export function SkillsArsenal() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
-    <section className="mx-auto max-w-7xl px-8" aria-labelledby="skills-heading">
-      <div className="mb-16 space-y-4 text-center">
-        <span className="font-label text-sm font-bold uppercase tracking-[0.2em] text-tertiary">
-          Skill Stack
-        </span>
-        <h2 id="skills-heading" className="font-headline text-4xl font-extrabold tracking-tight md:text-5xl">
-          Creative + Code Toolkit
-        </h2>
-        <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-primary to-tertiary" />
-      </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+    <section className="mx-auto max-w-7xl" aria-labelledby="skills-heading">
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 gap-12 md:grid-cols-3"
+      >
         {skillCategories.map((cat) => (
-          <div key={cat.id} className="space-y-6">
-            <div className="flex items-center gap-3">
-              <MaterialIcon
-                name={cat.icon}
-                className={`text-3xl ${
-                  cat.accent === "primary"
-                    ? "text-primary"
-                    : cat.accent === "secondary"
-                      ? "text-secondary"
-                      : "text-tertiary"
-                }`}
-              />
-              <h3 className="font-headline text-2xl font-bold">{cat.title}</h3>
+          <motion.div key={cat.id} variants={item} className="space-y-8">
+            <div className="flex items-center gap-4">
+              <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 ${
+                  cat.accent === "primary" ? "text-primary" : cat.accent === "secondary" ? "text-secondary" : "text-tertiary"
+                }`}>
+                <MaterialIcon name={cat.icon} className="text-2xl" />
+              </div>
+              <h3 className="font-headline text-2xl font-bold text-white">{cat.title}</h3>
             </div>
+
             {cat.bars && (
               <div className="space-y-4">
                 {cat.bars.map((bar) => (
                   <div
                     key={bar.name}
-                    className={`glass-panel rounded-xl border border-white/5 p-6 transition-all ${accentBorder[cat.accent]} group`}
+                    className={`glass-card rounded-2xl border border-white/5 p-6 transition-all duration-500 ${accentBorder[cat.accent]} group`}
                   >
                     <div className="mb-4 flex items-center justify-between">
-                      <span className="font-body font-semibold">{bar.name}</span>
-                      <span
-                        className={`rounded px-2 py-1 font-label text-xs font-bold ${accentBadge[cat.accent]}`}
-                      >
+                      <span className="font-body font-bold text-on-surface-variant group-hover:text-white transition-colors">
+                        {bar.name}
+                      </span>
+                      <span className={`rounded-lg px-2.5 py-1 font-label text-[10px] font-bold tracking-wider ${accentBadge[cat.accent]}`}>
                         {bar.percent}%
                       </span>
                     </div>
@@ -69,25 +78,30 @@ export function SkillsArsenal() {
                 ))}
               </div>
             )}
+
             {cat.tools && (
               <div className="grid grid-cols-2 gap-4">
                 {cat.tools.map((tool) => (
-                  <div
+                  <motion.div
+                    whileHover={{ scale: 1.05, y: -5 }}
                     key={tool.name}
-                    className="glass-panel flex flex-col items-center justify-center rounded-xl border border-white/5 p-6 text-center transition-all hover:bg-tertiary/5 group"
+                    className="glass-card flex flex-col items-center justify-center rounded-2xl border border-white/5 p-6 text-center transition-all hover:bg-white/10 group"
                   >
                     <MaterialIcon
                       name={tool.icon}
-                      className="mb-4 text-4xl text-on-surface-variant transition-colors group-hover:text-tertiary"
+                      className="mb-4 text-3xl text-on-surface-variant transition-colors group-hover:text-tertiary"
                     />
-                    <span className="font-label text-sm font-bold uppercase tracking-wider">{tool.name}</span>
-                  </div>
+                    <span className="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant group-hover:text-white">
+                      {tool.name}
+                    </span>
+                  </motion.div>
                 ))}
               </div>
             )}
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
+
