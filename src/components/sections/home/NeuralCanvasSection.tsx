@@ -57,7 +57,7 @@ export function NeuralCanvasSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.7 }}
-            className="relative min-h-[640px] overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 shadow-[0_30px_120px_rgba(8,8,30,0.45)] backdrop-blur-2xl"
+            className="relative min-h-[640px] overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 shadow-[0_30px_120px_rgba(8,8,30,0.45)] backdrop-blur-xl"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(129,236,255,0.08),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,108,149,0.08),transparent_30%)]" />
             <div className="absolute inset-6 rounded-[30px] border border-white/6" />
@@ -95,17 +95,17 @@ export function NeuralCanvasSection() {
               ))}
             </svg>
 
-            <div className="absolute left-1/2 top-1/2 z-10 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/10 bg-primary/5 blur-3xl" />
+            <div className="absolute left-1/2 top-1/2 z-10 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/5 bg-primary/5 blur-2xl" />
 
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 26, ease: "linear", repeat: Infinity }}
-              className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/10"
+              transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+              className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/10 will-change-transform"
             />
             <motion.div
               animate={{ rotate: -360 }}
-              transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-              className="absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
+              transition={{ duration: 25, ease: "linear", repeat: Infinity }}
+              className="absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 will-change-transform"
             />
 
             <div className="absolute left-1/2 top-1/2 z-20 flex h-48 w-48 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-[34px] border border-white/12 bg-[#080812]/90 text-center shadow-[0_0_50px_rgba(182,160,255,0.18)]">
@@ -131,7 +131,7 @@ export function NeuralCanvasSection() {
                 className="absolute z-20 w-[9.5rem] -translate-x-1/2 -translate-y-1/2"
                 style={{ left: `${signal.x}%`, top: `${signal.y}%` }}
               >
-                <div className="rounded-[26px] border border-white/10 bg-[#101024]/88 p-4 shadow-lg backdrop-blur-xl">
+                <div className="rounded-[22px] border border-white/10 bg-[#101024]/80 p-3 shadow-lg backdrop-blur-md">
                   <div
                     className={`inline-flex rounded-full bg-gradient-to-r px-3 py-1 font-label text-[10px] uppercase tracking-[0.24em] ${accentClasses[signal.accent]}`}
                   >
@@ -142,14 +142,14 @@ export function NeuralCanvasSection() {
               </motion.div>
             ))}
 
-            <div className="absolute bottom-8 left-8 z-20 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-xl">
+            <div className="absolute bottom-6 left-6 z-20 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
               <p className="font-label text-[10px] uppercase tracking-[0.28em] text-on-surface-variant">Active loop</p>
-              <p className="mt-2 text-sm text-white">Sketch to structure to motion to ship</p>
+              <p className="mt-1 text-sm text-white">Sketch to structure to ship</p>
             </div>
 
-            <div className="absolute right-8 top-8 z-20 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-xl">
+            <div className="absolute right-6 top-6 z-20 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
               <p className="font-label text-[10px] uppercase tracking-[0.28em] text-on-surface-variant">Build mode</p>
-              <p className="mt-2 text-sm text-white">Calm systems, bold visuals</p>
+              <p className="mt-1 text-sm text-white">Calm systems, bold visuals</p>
             </div>
           </motion.div>
         </div>

@@ -13,7 +13,7 @@ export function HomePage() {
     <main className="relative min-h-[calc(100vh-6rem)]">
       <HeroSection />
 
-      <section className="mx-auto max-w-7xl space-y-20 px-8 py-16">
+      <section className="mx-auto max-w-7xl space-y-32 px-8 py-24">
         <Reveal>
           <SectionHeading
             titleId="skills-heading"

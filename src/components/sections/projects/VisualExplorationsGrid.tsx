@@ -1,6 +1,5 @@
 import { designTiles } from "@/data/portfolio";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
-import { TiltCard } from "@/components/ui/TiltCard";
 import { motion } from "framer-motion";
 
 export function VisualExplorationsGrid() {
@@ -34,7 +33,7 @@ export function VisualExplorationsGrid() {
         className="grid grid-cols-1 gap-6 md:min-h-[600px] md:grid-cols-4 md:grid-rows-2"
       >
         <motion.div variants={item} className="md:col-span-2 md:row-span-2">
-          <TiltCard className="h-full">
+          <div className="h-full">
             <div className="glass-card group relative h-full min-h-[400px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-primary/50">
               {fintech.imageSrc && (
                 <img
@@ -63,11 +62,11 @@ export function VisualExplorationsGrid() {
                 </motion.div>
               </div>
             </div>
-          </TiltCard>
+          </div>
         </motion.div>
 
         <motion.div variants={item} className="md:col-span-2 md:row-span-1">
-          <TiltCard className="h-full">
+          <div className="h-full">
             <div className="glass-card group relative h-full min-h-[250px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-tertiary/50">
               {blueprints.imageSrc && (
                 <img
@@ -88,7 +87,7 @@ export function VisualExplorationsGrid() {
                 </p>
               </div>
             </div>
-          </TiltCard>
+          </div>
         </motion.div>
 
         <motion.div variants={item} className="md:col-span-1 md:row-span-1">

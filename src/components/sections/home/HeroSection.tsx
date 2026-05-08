@@ -39,7 +39,7 @@ const wordVariants = {
 
 export function HeroSection() {
   return (
-    <section className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-8 pb-20 pt-32 md:pt-20">
+    <section className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-8 pb-32 pt-32 md:pt-20">
       <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12">
         <div className="space-y-8 lg:col-span-7">
           <motion.div

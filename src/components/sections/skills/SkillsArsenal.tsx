@@ -83,7 +83,7 @@ export function SkillsArsenal() {
               <div className="grid grid-cols-2 gap-4">
                 {cat.tools.map((tool) => (
                   <motion.div
-                    whileHover={{ scale: 1.05, y: -5 }}
+                    whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.08)" }}
                     key={tool.name}
                     className="glass-card flex flex-col items-center justify-center rounded-2xl border border-white/5 p-6 text-center transition-all hover:bg-white/10 group"
                   >

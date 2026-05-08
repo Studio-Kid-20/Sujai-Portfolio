@@ -46,10 +46,10 @@ export const HOME_SYSTEM_PILLARS = [
 ] as const;
 
 export const HOME_SYSTEM_SIGNALS = [
-  { id: "vision", label: "Vision", caption: "Concept framing", x: 18, y: 22, accent: "primary" },
-  { id: "design", label: "Design", caption: "Interface language", x: 82, y: 20, accent: "secondary" },
-  { id: "frontend", label: "Frontend", caption: "React + motion", x: 84, y: 52, accent: "tertiary" },
-  { id: "systems", label: "Systems", caption: "Structure and scale", x: 74, y: 82, accent: "primary" },
-  { id: "motion", label: "Motion", caption: "Rhythm and feedback", x: 24, y: 84, accent: "secondary" },
-  { id: "research", label: "Research", caption: "Learning loops", x: 12, y: 56, accent: "tertiary" },
+  { id: "vision", label: "Vision", caption: "Concept framing", x: 22, y: 28, accent: "primary" },
+  { id: "design", label: "Design", caption: "Interface language", x: 78, y: 26, accent: "secondary" },
+  { id: "frontend", label: "Frontend", caption: "React + motion", x: 86, y: 52, accent: "tertiary" },
+  { id: "systems", label: "Systems", caption: "Structure and scale", x: 76, y: 76, accent: "primary" },
+  { id: "motion", label: "Motion", caption: "Rhythm and feedback", x: 30, y: 78, accent: "secondary" },
+  { id: "research", label: "Research", caption: "Learning loops", x: 14, y: 52, accent: "tertiary" },
 ] as const;

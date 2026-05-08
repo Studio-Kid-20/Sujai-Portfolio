@@ -1,6 +1,5 @@
 import type { Project } from "@/types";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
-import { TiltCard } from "@/components/ui/TiltCard";
 import { motion } from "framer-motion";
 
 type ProjectDevCardProps = {
@@ -12,7 +11,11 @@ export function ProjectCard({ project }: ProjectDevCardProps) {
   const hasRepo = Boolean(project.repoUrl);
 
   return (
-    <TiltCard className="h-full">
+    <motion.div 
+      whileHover={{ y: -8 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="h-full"
+    >
       <article className="glass-card group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(182,160,255,0.2)]">
         <div className="relative h-64 overflow-hidden">
           <img
@@ -79,6 +82,6 @@ export function ProjectCard({ project }: ProjectDevCardProps) {
           </div>
         </div>
       </article>
-    </TiltCard>
+    </motion.div>
   );
 }

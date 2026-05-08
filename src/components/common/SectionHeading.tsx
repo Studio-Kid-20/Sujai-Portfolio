@@ -57,7 +57,7 @@ export function SectionHeading({
       {description ? (
         <p
           className={cn(
-            "max-w-2xl text-lg leading-relaxed text-on-surface-variant",
+            "mb-10 max-w-2xl text-lg leading-relaxed text-on-surface-variant",
             isCentered && "mx-auto",
             descriptionClassName,
           )}
