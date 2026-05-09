@@ -30,7 +30,7 @@ type HeroHeadlineProps = {
 export function HeroHeadline({ containerVariants, wordVariants }: HeroHeadlineProps) {
   return (
     <motion.h1
-      className="font-jersey25 text-6xl font-extrabold leading-[1.2] tracking-[-0.02em] md:text-8xl"
+      className="font-headline text-5xl font-extrabold leading-[1.1] tracking-[-0.05em] md:text-7xl"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
