@@ -74,20 +74,39 @@ export function NeuralCanvasSection() {
           <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             {NODES.map((node) => {
               const isLeft = node.side === "left";
-              // Adjusted control points for more sweeping, spaced-out curves
               const cp1x = isLeft ? node.x + 30 : node.x - 30;
               const cp2x = isLeft ? 50 - 20 : 50 + 20;
               
+              const pathD = `M ${node.x} ${node.y} C ${cp1x} ${node.y}, ${cp2x} 50, 50 50`;
+              const reversedPathD = `M 50 50 C ${cp2x} 50, ${cp1x} ${node.y}, ${node.x} ${node.y}`;
+
               return (
-                <path
-                  key={`path-${node.id}`}
-                  d={`M ${node.x} ${node.y} C ${cp1x} ${node.y}, ${cp2x} 50, 50 50`}
-                  fill="none"
-                  stroke={accentColors[node.accent]}
-                  strokeWidth="0.3"
-                  strokeOpacity="0.4"
-                  strokeDasharray={isLeft ? "1, 2" : "none"}
-                />
+                <g key={`flow-${node.id}`}>
+                  <path
+                    d={pathD}
+                    fill="none"
+                    stroke={accentColors[node.accent]}
+                    strokeWidth="0.3"
+                    strokeOpacity="0.2"
+                    className="animate-flow-dash"
+                  />
+                  {/* Traveling Particle */}
+                  <circle r="0.4" fill={accentColors[node.accent]}>
+                    <animateMotion
+                      dur={`${3 + Math.random() * 3}s`}
+                      repeatCount="indefinite"
+                      path={reversedPathD}
+                      calcMode="spline"
+                      keySplines="0.4 0 0.2 1"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0;1;1;0"
+                      dur={`${3 + Math.random() * 3}s`}
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                </g>
               );
             })}
           </svg>

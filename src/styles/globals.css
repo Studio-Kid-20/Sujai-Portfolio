@@ -13,9 +13,26 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Syne', sans-serif;
   }
+
+  .font-jersey10 { font-family: 'Jersey 10', cursive; }
+  .font-jersey15 { font-family: 'Jersey 15', cursive; }
+  .font-jersey20 { font-family: 'Jersey 20', cursive; }
+  .font-jersey25 { font-family: 'Jersey 25', cursive; }
+
+  /* Data Flow Animations */
+  @keyframes flow-dash {
+    to {
+      stroke-dashoffset: -20;
+    }
+  }
+
+  .animate-flow-dash {
+    stroke-dasharray: 4 8;
+    animation: flow-dash 1s linear infinite;
+  }
 }
 
-@layer utilities {
+@layer components {
   .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
     font-family: "Material Symbols Outlined";
