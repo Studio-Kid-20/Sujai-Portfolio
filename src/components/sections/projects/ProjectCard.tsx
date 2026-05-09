@@ -11,7 +11,7 @@ export function ProjectCard({ project }: ProjectDevCardProps) {
   const hasRepo = Boolean(project.repoUrl);
 
   return (
-    <article className="glass-card group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(182,160,255,0.2)]">
+    <article className="glass-card group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_rgba(182,160,255,0.2)]">
       <div className="relative aspect-video overflow-hidden">
         <img
           src={project.imageSrc}
@@ -33,18 +33,18 @@ export function ProjectCard({ project }: ProjectDevCardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/5 bg-white/5 px-3 py-0.5 font-label text-[9px] font-bold uppercase tracking-wider text-on-surface-variant transition-colors group-hover:text-primary"
+              className="rounded-full border border-white/5 bg-white/5 px-3 py-1 font-bold uppercase tracking-wider text-on-surface-variant transition-colors group-hover:text-primary font-jersey15 text-sm"
             >
               {tag}
             </span>
           ))}
         </div>
         
-        <h3 className="mb-2 font-headline text-2xl font-bold text-white transition-colors group-hover:text-primary">
+        <h3 className="mb-2 min-h-[4rem] font-jersey25 text-3xl font-bold text-white transition-colors group-hover:text-primary line-clamp-2">
           {project.title}
         </h3>
         
-        <p className="mb-6 text-sm leading-relaxed text-on-surface-variant line-clamp-2">
+        <p className="mb-6 font-jersey20 text-base leading-relaxed text-on-surface-variant line-clamp-2">
           {project.description}
         </p>
         
@@ -53,9 +53,9 @@ export function ProjectCard({ project }: ProjectDevCardProps) {
             <motion.a
               whileTap={{ scale: 0.95 }}
               href={project.liveUrl}
-              className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-bold text-on-primary transition-all hover:bg-primary/90"
+              className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 font-jersey15 text-base font-bold text-on-primary transition-all hover:bg-primary/90"
             >
-              <MaterialIcon name="rocket_launch" className="text-sm" />
+              <MaterialIcon name="rocket_launch" className="text-base" />
               {project.liveLabel ?? "View"}
             </motion.a>
           )}

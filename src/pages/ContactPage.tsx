@@ -42,8 +42,8 @@ export function ContactPage() {
               title={CONTACT_PAGE_COPY.title}
               description={CONTACT_PAGE_COPY.intro}
               showLine
-              titleClassName="md:text-6xl"
-              descriptionClassName="max-w-md text-xl"
+              titleClassName="md:text-7xl font-jersey25"
+              descriptionClassName="max-w-md text-2xl font-jersey20"
             />
           </Reveal>
 

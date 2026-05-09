@@ -123,10 +123,10 @@ export function NeuralCanvasSection() {
                     />
                   </div>
                   <div className="p-4 text-center">
-                    <h4 className="font-headline text-[11px] font-bold uppercase tracking-widest text-white">
+                    <h4 className="font-headline font-syne text-[11px] font-bold uppercase tracking-widest text-white">
                       {node.label}
                     </h4>
-                    <p className="mt-1 text-[9px] font-medium leading-relaxed text-white/40">
+                    <p className="mt-1 font-inter text-[9px] font-medium leading-relaxed text-white/40">
                       {node.detail}
                     </p>
                   </div>
@@ -139,15 +139,15 @@ export function NeuralCanvasSection() {
         {/* Description Text Section */}
         <div className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-2">
           <div>
-            <h2 className="title-gradient font-headline text-3xl font-black leading-tight md:text-4xl">
+            <h2 className="title-gradient font-jersey25 text-3xl font-black leading-tight md:text-4xl">
               Auto-structured process <br /> for the modern web.
             </h2>
           </div>
           <div className="space-y-6">
-            <p className="font-body text-base leading-relaxed text-on-surface-variant">
+            <p className="font-jersey20 text-base leading-relaxed text-on-surface-variant">
               Every project follows a precise architectural loop, moving from imagination to responsive, live code through a system of interconnected nodes.
             </p>
-            <p className="font-body text-sm text-on-surface-variant opacity-70">
+            <p className="font-jersey20 text-sm text-on-surface-variant opacity-70">
               I turn raw ideas into scalable digital solutions.
             </p>
           </div>

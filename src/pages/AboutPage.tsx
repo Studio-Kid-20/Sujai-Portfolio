@@ -19,12 +19,12 @@ export function AboutPage() {
                 titleId="about-heading"
                 eyebrow={ABOUT_PAGE_COPY.eyebrow}
                 title={ABOUT_PAGE_COPY.title}
-                titleClassName="md:text-5xl"
+                titleClassName="md:text-6xl font-jersey25"
               />
             </Reveal>
             
             <Reveal delay={0.4}>
-              <p className="max-w-xl font-body text-xl leading-relaxed text-on-surface-variant">
+              <p className="max-w-xl font-jersey20 text-2xl leading-relaxed text-on-surface-variant">
                 {ABOUT_PAGE_COPY.story}
               </p>
             </Reveal>
@@ -32,7 +32,7 @@ export function AboutPage() {
             <div className="grid gap-4">
               {ABOUT_PAGE_COPY.highlights.map((highlight, i) => (
                 <Reveal key={highlight} delay={0.5 + i * 0.1}>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-5 text-sm text-on-surface-variant backdrop-blur-md">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-5 text-base text-on-surface-variant backdrop-blur-md font-jersey20">
                     {highlight}
                   </div>
                 </Reveal>
@@ -45,10 +45,10 @@ export function AboutPage() {
                    <MaterialIcon name="auto_awesome" className="text-4xl text-secondary" />
                 </div>
                 <p className="font-label text-xs uppercase tracking-[0.2em] text-secondary">Milestone</p>
-                <h2 className="title-gradient mt-3 font-headline text-2xl font-bold">
+                <h2 className="title-gradient mt-3 font-jersey25 text-3xl font-bold">
                   {ABOUT_PAGE_COPY.milestone.title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-on-surface-variant">
+                <p className="mt-3 font-jersey20 text-base leading-relaxed text-on-surface-variant">
                   {ABOUT_PAGE_COPY.milestone.description}
                 </p>
               </div>
@@ -58,13 +58,13 @@ export function AboutPage() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link
                   to="/contact"
-                  className="rounded-xl bg-primary px-8 py-4 font-bold text-on-primary shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+                  className="rounded-xl bg-primary px-8 py-4 font-bold text-on-primary shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95 font-inter"
                 >
                   Let's Build
                 </Link>
                 <Link
                   to="/projects"
-                  className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 font-bold text-white backdrop-blur-md transition-all hover:bg-white/10"
+                  className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 font-bold text-white backdrop-blur-md transition-all hover:bg-white/10 font-inter"
                 >
                   Explore Projects
                 </Link>

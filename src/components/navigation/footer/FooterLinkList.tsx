@@ -27,7 +27,7 @@ export function FooterLinkList({ compact = false, links }: FooterLinkListProps) 
   return (
     <div className="flex flex-col space-y-2">
       {links.map((link) => (
-        <Link key={link.to} to={link.to} className={`font-body text-sm ${className}`}>
+        <Link key={link.to} to={link.to} className={`font-jersey20 text-sm ${className}`}>
           {link.label}
         </Link>
       ))}

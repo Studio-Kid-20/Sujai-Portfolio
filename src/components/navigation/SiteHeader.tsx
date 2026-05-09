@@ -20,7 +20,7 @@ export function SiteHeader() {
               key={item.to}
               to={item.to}
               end={item.match === "exact"}
-              className="relative px-4 py-2 text-sm font-bold uppercase tracking-widest transition-colors"
+              className="relative px-4 py-2 text-sm font-bold uppercase tracking-widest transition-colors font-inter"
             >
               {({ isActive }) => (
                 <>
@@ -43,7 +43,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <NavLink
             to="/contact"
-            className="group relative flex items-center justify-center overflow-hidden rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-on-primary transition-all hover:scale-105 active:scale-95"
+            className="group relative flex items-center justify-center overflow-hidden rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-on-primary transition-all hover:scale-105 active:scale-95 font-inter"
           >
             <span className="relative z-10">Let's Build</span>
             <div className="absolute inset-0 z-0 bg-gradient-to-r from-secondary/0 via-white/20 to-secondary/0 opacity-0 transition-opacity group-hover:opacity-100" />

@@ -9,8 +9,16 @@ export function SiteFooter({ variant = "default" }: SiteFooterProps) {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   if (variant === "home") {
-    return <HomeFooter onScrollTop={scrollTop} />;
+    return (
+      <div className="font-jersey20">
+        <HomeFooter onScrollTop={scrollTop} />
+      </div>
+    );
   }
 
-  return <DefaultFooter onScrollTop={scrollTop} />;
+  return (
+    <div className="font-jersey20">
+      <DefaultFooter onScrollTop={scrollTop} />
+    </div>
+  );
 }

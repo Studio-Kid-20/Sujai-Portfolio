@@ -34,7 +34,7 @@ export function HeroSection() {
             {/* Static Headline — No entrance animation */}
             <HeroHeadline containerVariants={staticHeadlineVariants} wordVariants={staticWordVariants} />
 
-            <p className="max-w-2xl font-body text-xl leading-relaxed text-on-surface-variant md:text-2xl">
+            <p className="max-w-2xl font-jersey20 text-2xl leading-relaxed text-on-surface-variant md:text-3xl">
               {HOME_HERO_INTRO}
             </p>
           </div>
@@ -65,7 +65,7 @@ export function HeroSection() {
 
           <div className="flex flex-wrap gap-3 pt-20">
             {HOME_SKILL_PILLS.map((pill) => (
-              <Chip key={pill}>{pill}</Chip>
+              <Chip key={pill} className="font-jersey15 text-sm">{pill}</Chip>
             ))}
           </div>
         </div>

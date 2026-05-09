@@ -37,7 +37,7 @@ export function FooterConnectList({ compact = false }: FooterConnectListProps) {
     <div className="flex flex-col space-y-2">
       <a
         href={`mailto:${contactMeta.email}`}
-        className="group flex items-center gap-2 font-body text-sm text-slate-500 transition-colors hover:text-cyan-400 light:hover:text-violet-600"
+        className="group flex items-center gap-2 font-jersey20 text-sm text-slate-500 transition-colors hover:text-cyan-400 light:hover:text-violet-600"
       >
         <MaterialIcon name="alternate_email" className="text-lg transition-transform group-hover:scale-110" />
         {contactMeta.email}
@@ -46,7 +46,7 @@ export function FooterConnectList({ compact = false }: FooterConnectListProps) {
         <a
           key={social.href}
           href={social.href}
-          className="group flex items-center gap-2 font-body text-sm text-slate-500 transition-colors hover:text-cyan-400 light:hover:text-violet-600"
+          className="group flex items-center gap-2 font-jersey20 text-sm text-slate-500 transition-colors hover:text-cyan-400 light:hover:text-violet-600"
           target="_blank"
           rel="noreferrer"
         >

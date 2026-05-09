@@ -73,6 +73,10 @@ export default {
         body: ["Inter", "sans-serif"],
         label: ["JetBrains Mono", "monospace"],
         accent: ["Outfit", "sans-serif"],
+        jersey10: ["'Jersey 10'", "cursive"],
+        jersey15: ["'Jersey 15'", "cursive"],
+        jersey20: ["'Jersey 20'", "cursive"],
+        jersey25: ["'Jersey 25'", "cursive"],
       },
       keyframes: {
         spinSlow: {

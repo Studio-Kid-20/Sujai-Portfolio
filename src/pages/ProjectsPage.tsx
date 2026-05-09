@@ -17,8 +17,8 @@ export function ProjectsPage() {
             title={PROJECTS_PAGE_COPY.title}
             description={PROJECTS_PAGE_COPY.intro}
             showLine
-            titleClassName="md:text-6xl"
-            descriptionClassName="text-xl"
+            titleClassName="md:text-7xl font-jersey25"
+            descriptionClassName="text-2xl font-jersey20"
           />
         </Reveal>
       </section>
@@ -26,7 +26,7 @@ export function ProjectsPage() {
       <section className="mb-32" aria-labelledby="dev-works-heading">
         <Reveal>
           <div className="mb-16">
-            <h2 id="dev-works-heading" className="title-gradient font-headline text-3xl font-bold md:text-5xl">
+            <h2 id="dev-works-heading" className="title-gradient font-jersey25 text-4xl font-bold md:text-6xl">
               Selected Work
             </h2>
             <div className="mt-4 h-1 w-12 bg-primary" />
@@ -43,7 +43,7 @@ export function ProjectsPage() {
 
       <Reveal>
         <div className="mb-16">
-          <h2 id="visual-heading" className="title-gradient font-headline text-3xl font-bold md:text-5xl">
+          <h2 id="visual-heading" className="title-gradient font-jersey25 text-4xl font-bold md:text-6xl">
             Visual Explorations
           </h2>
           <div className="mt-4 h-1 w-12 bg-secondary" />

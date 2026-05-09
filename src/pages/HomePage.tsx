@@ -19,7 +19,8 @@ export function HomePage() {
             titleId="skills-heading"
             title={HOME_SECTION_COPY.skills.title}
             description={HOME_SECTION_COPY.skills.description}
-            titleClassName="text-3xl md:text-4xl"
+            titleClassName="text-3xl md:text-4xl font-jersey25"
+            descriptionClassName="font-jersey20"
           />
           <div className="mt-10">
             <SkillsArsenal />
@@ -32,7 +33,8 @@ export function HomePage() {
             titleId="projects-heading"
             title={HOME_SECTION_COPY.projects.title}
             description={HOME_SECTION_COPY.projects.description}
-            titleClassName="text-3xl md:text-4xl"
+            titleClassName="text-3xl md:text-4xl font-jersey25"
+            descriptionClassName="font-jersey20"
           />
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -51,7 +53,8 @@ export function HomePage() {
             titleId="visual-heading"
             title={HOME_SECTION_COPY.explorations.title}
             description={HOME_SECTION_COPY.explorations.description}
-            titleClassName="text-3xl md:text-4xl"
+            titleClassName="text-3xl md:text-4xl font-jersey25"
+            descriptionClassName="font-jersey20"
           />
           <div className="mt-10">
             <VisualExplorationsGrid />

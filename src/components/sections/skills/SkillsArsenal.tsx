@@ -55,7 +55,7 @@ export function SkillsArsenal() {
                 }`}>
                 <MaterialIcon name={cat.icon} className="text-2xl" />
               </div>
-              <h3 className="font-headline text-2xl font-bold text-white">{cat.title}</h3>
+              <h3 className="font-jersey25 text-3xl font-bold text-white">{cat.title}</h3>
             </div>
 
             {cat.bars && (
@@ -66,10 +66,10 @@ export function SkillsArsenal() {
                     className={`glass-card rounded-2xl border border-white/5 p-6 transition-all duration-500 ${accentBorder[cat.accent]} group`}
                   >
                     <div className="mb-4 flex items-center justify-between">
-                      <span className="font-body font-bold text-on-surface-variant group-hover:text-white transition-colors">
+                      <span className="font-jersey20 text-xl font-bold text-on-surface-variant group-hover:text-white transition-colors">
                         {bar.name}
                       </span>
-                      <span className={`rounded-lg px-2.5 py-1 font-label text-[10px] font-bold tracking-wider ${accentBadge[cat.accent]}`}>
+                      <span className={`rounded-lg px-2.5 py-1 font-jersey15 text-sm font-bold tracking-wider ${accentBadge[cat.accent]}`}>
                         {bar.percent}%
                       </span>
                     </div>
@@ -90,7 +90,7 @@ export function SkillsArsenal() {
                       name={tool.icon}
                       className="mb-4 text-3xl text-on-surface-variant transition-colors group-hover:text-tertiary"
                     />
-                    <span className="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant group-hover:text-white">
+                    <span className="font-jersey15 text-sm font-bold uppercase tracking-widest text-on-surface-variant group-hover:text-white">
                       {tool.name}
                     </span>
                   </div>

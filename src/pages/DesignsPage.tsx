@@ -12,7 +12,8 @@ export function DesignsPage() {
           eyebrow={DESIGNS_PAGE_COPY.eyebrow}
           title={DESIGNS_PAGE_COPY.title}
           description={DESIGNS_PAGE_COPY.intro}
-          titleClassName="md:text-5xl"
+          titleClassName="md:text-6xl font-jersey25"
+          descriptionClassName="text-2xl font-jersey20"
         />
       </section>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -31,9 +32,9 @@ export function DesignsPage() {
               <p className="mb-1 font-label text-[10px] font-bold uppercase tracking-widest text-secondary">
                 {tile.label || "Exploration"}
               </p>
-              <h2 className="title-gradient font-headline text-xl font-bold">{tile.title}</h2>
+              <h2 className="title-gradient font-jersey25 text-2xl font-bold">{tile.title}</h2>
               {tile.subtitle ? (
-                <p className="mt-2 text-sm text-on-surface-variant light:text-slate-600">{tile.subtitle}</p>
+                <p className="mt-2 font-jersey20 text-base text-on-surface-variant light:text-slate-600">{tile.subtitle}</p>
               ) : null}
             </div>
           </article>

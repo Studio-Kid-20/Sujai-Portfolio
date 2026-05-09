@@ -31,8 +31,8 @@ function ContactDetailItem({
           <MaterialIcon name={icon} className="text-2xl" />
         </div>
         <div>
-          <p className="font-label text-[10px] uppercase tracking-wider text-on-surface-variant">{label}</p>
-          <p className="font-headline text-lg font-bold text-white transition-colors group-hover:text-inherit">{value}</p>
+          <p className="font-label uppercase tracking-wider text-on-surface-variant font-jersey15 text-sm">{label}</p>
+          <p className="font-bold text-white transition-colors group-hover:text-inherit font-jersey20 text-xl">{value}</p>
         </div>
       </div>
     </Reveal>
