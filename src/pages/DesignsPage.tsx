@@ -12,8 +12,8 @@ export function DesignsPage() {
           eyebrow={DESIGNS_PAGE_COPY.eyebrow}
           title={DESIGNS_PAGE_COPY.title}
           description={DESIGNS_PAGE_COPY.intro}
-          titleClassName="md:text-6xl font-jersey25"
-          descriptionClassName="text-2xl font-jersey20"
+          titleClassName="md:text-5xl font-syne"
+          descriptionClassName="font-body"
         />
       </section>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

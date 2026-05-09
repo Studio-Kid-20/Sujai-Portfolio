@@ -17,8 +17,8 @@ export function ProjectsPage() {
             title={PROJECTS_PAGE_COPY.title}
             description={PROJECTS_PAGE_COPY.intro}
             showLine
-            titleClassName="md:text-7xl font-jersey25"
-            descriptionClassName="text-2xl font-jersey20"
+            titleClassName="md:text-6xl font-syne"
+            descriptionClassName="text-xl"
           />
         </Reveal>
       </section>

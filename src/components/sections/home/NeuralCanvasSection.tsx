@@ -144,10 +144,10 @@ export function NeuralCanvasSection() {
             </h2>
           </div>
           <div className="space-y-6">
-            <p className="font-jersey20 text-base leading-relaxed text-on-surface-variant">
+            <p className="font-jersey20 text-2xl leading-relaxed text-on-surface-variant">
               Every project follows a precise architectural loop, moving from imagination to responsive, live code through a system of interconnected nodes.
             </p>
-            <p className="font-jersey20 text-sm text-on-surface-variant opacity-70">
+            <p className="font-jersey20 text-lg text-on-surface-variant opacity-70">
               I turn raw ideas into scalable digital solutions.
             </p>
           </div>

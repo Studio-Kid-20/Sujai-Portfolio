@@ -19,12 +19,12 @@ export function AboutPage() {
                 titleId="about-heading"
                 eyebrow={ABOUT_PAGE_COPY.eyebrow}
                 title={ABOUT_PAGE_COPY.title}
-                titleClassName="md:text-6xl font-jersey25"
+                titleClassName="md:text-5xl font-syne"
               />
             </Reveal>
             
             <Reveal delay={0.4}>
-              <p className="max-w-xl font-jersey20 text-2xl leading-relaxed text-on-surface-variant">
+              <p className="max-w-xl font-body text-xl leading-relaxed text-on-surface-variant">
                 {ABOUT_PAGE_COPY.story}
               </p>
             </Reveal>
