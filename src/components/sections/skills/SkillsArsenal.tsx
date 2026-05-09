@@ -28,7 +28,7 @@ export function SkillsArsenal() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.06
       }
     }
   };
@@ -82,8 +82,7 @@ export function SkillsArsenal() {
             {cat.tools && (
               <div className="grid grid-cols-2 gap-4">
                 {cat.tools.map((tool) => (
-                  <motion.div
-                    whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.08)" }}
+                  <div
                     key={tool.name}
                     className="glass-card flex flex-col items-center justify-center rounded-2xl border border-white/5 p-6 text-center transition-all hover:bg-white/10 group"
                   >
@@ -94,7 +93,7 @@ export function SkillsArsenal() {
                     <span className="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant group-hover:text-white">
                       {tool.name}
                     </span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             )}

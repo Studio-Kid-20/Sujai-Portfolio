@@ -1,157 +1,156 @@
-import { motion } from "framer-motion";
+import { MaterialIcon } from "@/components/ui/MaterialIcon";
 
-import { SectionHeading } from "@/components/common/SectionHeading";
-import { HOME_SYSTEM_PILLARS, HOME_SYSTEM_SIGNALS } from "@/data/pages/home";
+type Accent = "primary" | "secondary" | "tertiary";
 
-const accentClasses = {
-  primary: "from-primary/40 to-primary/5 text-primary",
-  secondary: "from-secondary/40 to-secondary/5 text-secondary",
-  tertiary: "from-tertiary/40 to-tertiary/5 text-tertiary",
-} as const;
+interface NodeData {
+  id: string;
+  label: string;
+  icon: string;
+  side: "left" | "right";
+  x: number;
+  y: number;
+  accent: Accent;
+  number: string;
+  detail: string;
+}
+
+const NODES: NodeData[] = [
+  // Input Side Nodes (Left) - Pushed further to edges
+  { id: "ideas", label: "Ideas", icon: "lightbulb", side: "left", x: 18, y: 18, accent: "primary", number: "01", detail: "Conceptual Framing" },
+  { id: "design", label: "Design", icon: "architecture", side: "left", x: 10, y: 50, accent: "secondary", number: "02", detail: "Visual Language" },
+  { id: "code", label: "Code", icon: "terminal", side: "left", x: 18, y: 82, accent: "tertiary", number: "03", detail: "Logic Architecture" },
+  
+  // Output Side Nodes (Right) - Pushed further to edges
+  { id: "website", label: "Website", icon: "language", side: "right", x: 82, y: 18, accent: "secondary", number: "04", detail: "Live Deployment" },
+  { id: "solution", label: "Solution", icon: "auto_fix_high", side: "right", x: 90, y: 50, accent: "primary", number: "05", detail: "Business Value" },
+  { id: "ui-ux", label: "UI/UX", icon: "devices", side: "right", x: 82, y: 82, accent: "tertiary", number: "06", detail: "Human Experience" },
+];
+
+const accentColors = {
+  primary: "#b6a0ff", // Violet
+  secondary: "#ff8ab4", // Pink/Rose
+  tertiary: "#8affd6", // Mint/Cyan
+};
 
 export function NeuralCanvasSection() {
   return (
-    <section className="relative overflow-hidden py-24">
-      <div className="absolute inset-x-0 top-20 h-80 bg-[radial-gradient(circle_at_center,rgba(182,160,255,0.16),transparent_65%)]" />
+    <section className="relative py-24" aria-labelledby="neural-heading">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Main Graphic Container with more breathing room */}
+        <div className="relative aspect-[16/8] w-full rounded-[4rem] border border-white/5 bg-[#0a0a1a] shadow-2xl overflow-hidden">
+          
+          {/* Subtle Background Grid - Clean Performance */}
+          <div className="absolute inset-0 opacity-[0.03] [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:40px_40px]" />
 
-      <div className="relative mx-auto max-w-7xl px-8">
-        <SectionHeading
-          eyebrow="Creative System"
-          title="The Neural Fabric."
-          description="A cleaner look at how ideas move through my process: from rough concept, through interface decisions, into motion, code, and polished delivery."
-          align="center"
-          showLine
-          titleClassName="md:text-6xl"
-          descriptionClassName="max-w-3xl"
-        />
-
-        <div className="mt-16 grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-5">
-            {HOME_SYSTEM_PILLARS.map((pillar, index) => (
-              <motion.article
-                key={pillar.title}
-                initial={{ opacity: 0, x: -24 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.35 }}
-                transition={{ duration: 0.55, delay: 0.1 + index * 0.08 }}
-                className="glass-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="font-headline text-2xl font-bold title-gradient">{pillar.title}</h3>
-                    <p className="mt-3 max-w-xl text-sm leading-7 text-on-surface-variant">{pillar.description}</p>
-                  </div>
-                  <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-label text-[10px] uppercase tracking-[0.24em] text-primary">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-                </div>
-                <div className="mt-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 font-label text-[10px] uppercase tracking-[0.24em] text-on-surface-variant">
-                  {pillar.metric}
-                </div>
-              </motion.article>
-            ))}
+          {/* Concentric Glow Rings - Re-centered and scaled up */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="h-[36rem] w-[36rem] rounded-full border border-primary/5 bg-primary/5 animate-pulse" />
+            <div className="absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/10 bg-primary/5" />
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 26 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.7 }}
-            className="relative min-h-[640px] overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 shadow-[0_30px_120px_rgba(8,8,30,0.45)] backdrop-blur-xl"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(129,236,255,0.08),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,108,149,0.08),transparent_30%)]" />
-            <div className="absolute inset-6 rounded-[30px] border border-white/6" />
-
-            <svg
-              className="absolute inset-0 h-full w-full"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient id="signalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="rgba(129, 236, 255, 0.25)" />
-                  <stop offset="50%" stopColor="rgba(182, 160, 255, 0.8)" />
-                  <stop offset="100%" stopColor="rgba(255, 108, 149, 0.25)" />
-                </linearGradient>
-              </defs>
-
-              {HOME_SYSTEM_SIGNALS.map((signal, index) => (
-                <motion.line
-                  key={signal.id}
-                  x1="50"
-                  y1="50"
-                  x2={signal.x}
-                  y2={signal.y}
-                  stroke="url(#signalGradient)"
-                  strokeWidth="0.35"
-                  strokeLinecap="round"
-                  strokeDasharray="1.8 1.2"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  whileInView={{ pathLength: 1, opacity: 0.9 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.1 + index * 0.08 }}
-                />
-              ))}
-            </svg>
-
-            <div className="absolute left-1/2 top-1/2 z-10 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/5 bg-primary/5 blur-2xl" />
-
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-              className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/10 will-change-transform"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 25, ease: "linear", repeat: Infinity }}
-              className="absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 will-change-transform"
-            />
-
-            <div className="absolute left-1/2 top-1/2 z-20 flex h-48 w-48 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-[34px] border border-white/12 bg-[#080812]/90 text-center shadow-[0_0_50px_rgba(182,160,255,0.18)]">
-              <span className="font-label text-[10px] uppercase tracking-[0.35em] text-primary">Core System</span>
-              <p className="mt-3 font-headline text-4xl font-black title-gradient">SUJAI</p>
-              <p className="mt-3 max-w-[10rem] text-xs leading-5 text-on-surface-variant">
-                Turning imagination into responsive, high-contrast interfaces.
-              </p>
-              <div className="mt-5 flex gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_12px_rgba(182,160,255,0.8)]" />
-                <span className="h-2.5 w-2.5 rounded-full bg-tertiary shadow-[0_0_12px_rgba(129,236,255,0.8)]" />
-                <span className="h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_12px_rgba(255,108,149,0.8)]" />
+          {/* Central Hub (SUJAI) - Increased Radius */}
+          <div className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2">
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary via-secondary to-tertiary p-[1px] shadow-[0_0_100px_rgba(182,160,255,0.25)]">
+                <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-[#08081a]">
+                  <div className="mb-1 text-[11px] font-black uppercase tracking-[0.35em] text-white/40">SYSTEM</div>
+                  <span 
+                    className="text-2xl tracking-[0.05em] text-white"
+                    style={{ fontFamily: "'Jersey 25', cursive" }}
+                  >
+                    SUJAI
+                  </span>
+                  <div className="mt-2 flex gap-1.5">
+                    <span className="h-1 w-1 rounded-full bg-primary animate-pulse" />
+                    <span className="h-1 w-1 rounded-full bg-secondary animate-pulse [animation-delay:0.2s]" />
+                    <span className="h-1 w-1 rounded-full bg-tertiary animate-pulse [animation-delay:0.4s]" />
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
 
-            {HOME_SYSTEM_SIGNALS.map((signal, index) => (
-              <motion.div
-                key={signal.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.45, delay: 0.18 + index * 0.08 }}
-                className="absolute z-20 w-[9.5rem] -translate-x-1/2 -translate-y-1/2"
-                style={{ left: `${signal.x}%`, top: `${signal.y}%` }}
-              >
-                <div className="rounded-[22px] border border-white/10 bg-[#101024]/80 p-3 shadow-lg backdrop-blur-md">
-                  <div
-                    className={`inline-flex rounded-full bg-gradient-to-r px-3 py-1 font-label text-[10px] uppercase tracking-[0.24em] ${accentClasses[signal.accent]}`}
-                  >
-                    {signal.label}
-                  </div>
-                  <p className="mt-3 text-sm font-medium text-white">{signal.caption}</p>
+          {/* Connection Layer (SVG) */}
+          <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            {NODES.map((node) => {
+              const isLeft = node.side === "left";
+              // Adjusted control points for more sweeping, spaced-out curves
+              const cp1x = isLeft ? node.x + 30 : node.x - 30;
+              const cp2x = isLeft ? 50 - 20 : 50 + 20;
+              
+              return (
+                <path
+                  key={`path-${node.id}`}
+                  d={`M ${node.x} ${node.y} C ${cp1x} ${node.y}, ${cp2x} 50, 50 50`}
+                  fill="none"
+                  stroke={accentColors[node.accent]}
+                  strokeWidth="0.3"
+                  strokeOpacity="0.4"
+                  strokeDasharray={isLeft ? "1, 2" : "none"}
+                />
+              );
+            })}
+          </svg>
+
+          {/* Satellite Nodes - Spaced out and clean */}
+          {NODES.map((node) => (
+            <div
+              key={node.id}
+              className="absolute z-20 group"
+              style={{
+                left: `${node.x}%`,
+                top: `${node.y}%`,
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              <div className="flex flex-col items-center gap-3">
+                {/* Number Badge */}
+                <div 
+                  className="mb-[-10px] z-30 px-3 py-1 rounded-lg border border-white/10 bg-[#0a0a20] text-[9px] font-black tracking-widest transition-all group-hover:scale-110 group-hover:border-white/20"
+                  style={{ color: accentColors[node.accent] }}
+                >
+                  {node.number}
                 </div>
-              </motion.div>
-            ))}
 
-            <div className="absolute bottom-6 left-6 z-20 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-              <p className="font-label text-[10px] uppercase tracking-[0.28em] text-on-surface-variant">Active loop</p>
-              <p className="mt-1 text-sm text-white">Sketch to structure to ship</p>
+                <div 
+                  className="flex w-36 flex-col overflow-hidden rounded-[2rem] border border-white/5 bg-[#0c0c21]/90 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-white/20 hover:translate-y-[-4px]"
+                >
+                  <div className="flex h-12 items-center justify-center bg-white/[0.03]">
+                    <MaterialIcon 
+                      name={node.icon} 
+                      className="text-2xl" 
+                      style={{ color: accentColors[node.accent] }}
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h4 className="font-headline text-[11px] font-bold uppercase tracking-widest text-white">
+                      {node.label}
+                    </h4>
+                    <p className="mt-1 text-[9px] font-medium leading-relaxed text-white/40">
+                      {node.detail}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          ))}
+        </div>
 
-            <div className="absolute right-6 top-6 z-20 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-              <p className="font-label text-[10px] uppercase tracking-[0.28em] text-on-surface-variant">Build mode</p>
-              <p className="mt-1 text-sm text-white">Calm systems, bold visuals</p>
-            </div>
-          </motion.div>
+        {/* Description Text Section */}
+        <div className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-2">
+          <div>
+            <h2 className="title-gradient font-headline text-3xl font-black leading-tight md:text-4xl">
+              Auto-structured process <br /> for the modern web.
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="font-body text-base leading-relaxed text-on-surface-variant">
+              Every project follows a precise architectural loop, moving from imagination to responsive, live code through a system of interconnected nodes.
+            </p>
+            <p className="font-body text-sm text-on-surface-variant opacity-70">
+              I turn raw ideas into scalable digital solutions.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -19,8 +19,8 @@ export function VisualExplorationsGrid() {
   };
 
   const item = {
-    hidden: { opacity: 0, scale: 0.95 },
-    show: { opacity: 1, scale: 1 }
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
   };
 
   return (
@@ -39,7 +39,7 @@ export function VisualExplorationsGrid() {
                 <img
                   src={fintech.imageSrc}
                   alt={fintech.imageAlt ?? ""}
-                  className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                  className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   loading="lazy"
                 />
               )}
@@ -54,12 +54,9 @@ export function VisualExplorationsGrid() {
                 <p className="mb-6 max-w-md text-sm leading-relaxed text-on-surface-variant md:text-base">
                   {fintech.subtitle}
                 </p>
-                <motion.div 
-                  whileHover={{ x: 10 }}
-                  className="flex items-center gap-3 text-sm font-bold text-secondary"
-                >
+                <div className="flex items-center gap-3 text-sm font-bold text-secondary group-hover:translate-x-2 transition-transform duration-300">
                   Explore interface study <MaterialIcon name="arrow_forward" />
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>
@@ -72,7 +69,7 @@ export function VisualExplorationsGrid() {
                 <img
                   src={blueprints.imageSrc}
                   alt={blueprints.imageAlt ?? ""}
-                  className="h-full w-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
+                  className="h-full w-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
               )}
@@ -96,7 +93,7 @@ export function VisualExplorationsGrid() {
               <img
                 src={brand.imageSrc}
                 alt={brand.imageAlt ?? ""}
-                className="h-full w-full object-cover opacity-40 transition-all duration-700 group-hover:scale-110 group-hover:opacity-80"
+                className="h-full w-full object-cover opacity-40 transition-all duration-700 group-hover:scale-105 group-hover:opacity-80"
                 loading="lazy"
               />
             )}
@@ -115,7 +112,7 @@ export function VisualExplorationsGrid() {
               <img
                 src={motionTile.imageSrc}
                 alt={motionTile.imageAlt ?? ""}
-                className="h-full w-full object-cover opacity-40 transition-all duration-700 group-hover:scale-110 group-hover:opacity-80"
+                className="h-full w-full object-cover opacity-40 transition-all duration-700 group-hover:scale-105 group-hover:opacity-80"
                 loading="lazy"
               />
             )}

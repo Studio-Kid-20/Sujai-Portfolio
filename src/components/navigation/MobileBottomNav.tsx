@@ -6,7 +6,7 @@ import { MaterialIcon } from "@/components/ui/MaterialIcon";
 export function MobileBottomNav() {
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0c0c21]/90 pb-6 pt-2 backdrop-blur-xl md:hidden"
+      className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0c0c21] pb-6 pt-2 md:hidden"
       aria-label="Mobile primary"
     >
       <div className="mx-auto flex max-w-lg items-center justify-around px-4">

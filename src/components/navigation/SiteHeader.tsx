@@ -7,7 +7,7 @@ export function SiteHeader() {
   return (
     <header className="fixed left-1/2 top-6 z-50 w-[95%] max-w-7xl -translate-x-1/2">
       <nav
-        className="flex w-full items-center justify-between px-6 py-4 font-label tracking-tight md:px-10 rounded-2xl border border-white/10 bg-surface/40 shadow-[0px_20px_40px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
+        className="flex w-full items-center justify-between px-6 py-4 font-label tracking-tight md:px-10 rounded-2xl border border-white/10 bg-[#0c0c21] shadow-[0px_20px_40px_rgba(0,0,0,0.3)]"
         aria-label="Primary"
       >
         <div className="flex items-center gap-2">

@@ -23,23 +23,19 @@ export const Reveal = ({ children, width = "fit-content", className, delay = 0.2
   const variants = {
     hidden: {
       opacity: 0,
-      y: direction === "up" ? 75 : direction === "down" ? -75 : 0,
-      x: direction === "left" ? 75 : direction === "right" ? -75 : 0,
     },
     visible: {
       opacity: 1,
-      y: 0,
-      x: 0,
     },
   };
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }} className={className}>
+    <div ref={ref} style={{ position: "relative", width }} className={className}>
       <motion.div
         variants={variants}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay }}
+        transition={{ duration: 0.3, delay, ease: "linear" }}
       >
         {children}
       </motion.div>

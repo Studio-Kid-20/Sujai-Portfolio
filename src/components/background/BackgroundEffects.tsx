@@ -7,19 +7,19 @@ export const BackgroundEffects = () => {
   return (
     <>
       {/* Background Depth Elements */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] rounded-full bg-secondary/20 blur-[100px] animate-pulse delay-700" />
-        <div className="absolute top-[20%] right-[10%] w-[25%] h-[25%] rounded-full bg-tertiary/10 blur-[80px] animate-pulse delay-1000" />
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-25">
+        <div className="absolute top-[-5%] left-[-5%] w-[35%] h-[35%] rounded-full bg-primary/15 blur-[80px] animate-pulse" />
+        <div className="absolute bottom-[15%] right-[-5%] w-[25%] h-[25%] rounded-full bg-secondary/15 blur-[60px] animate-pulse delay-700" />
+        <div className="absolute top-[30%] right-[15%] w-[20%] h-[20%] rounded-full bg-tertiary/10 blur-[40px] animate-pulse delay-1000" />
 
         {/* Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        {/* <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" /> */}
       </div>
 
-      {/* Page Specific Decor Layer */}
-      <div className="fixed inset-0 z-[1] pointer-events-none">
+      {/* Page Specific Decor Layer - Disabled for performance */}
+      {/* <div className="fixed inset-0 z-[1] pointer-events-none">
         {pathname === "/" ? <DotGrid /> : <FloatingDecor />}
-      </div>
+      </div> */}
     </>
   );
 };
