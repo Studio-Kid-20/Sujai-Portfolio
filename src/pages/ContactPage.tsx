@@ -35,7 +35,7 @@ export function ContactPage() {
     <main className="mx-auto max-w-7xl px-6 pb-24 pt-12">
       <div className="grid items-start gap-16 lg:grid-cols-2">
         <div className="space-y-12">
-          <Reveal direction="right">
+          <Reveal>
             <SectionHeading
               as="h1"
               eyebrow={CONTACT_PAGE_COPY.eyebrow}

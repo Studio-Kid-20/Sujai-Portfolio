@@ -23,7 +23,7 @@ function ContactDetailItem({
   delay,
 }: ContactDetailItemProps) {
   return (
-    <Reveal direction="right" delay={delay}>
+    <Reveal delay={delay}>
       <div className="group flex items-center gap-6">
         <div
           className={`flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition-all duration-500 ${accentClassName} ${hoverClassName}`}
@@ -62,7 +62,7 @@ export function ContactDetails() {
         />
       </div>
 
-      <Reveal direction="right" delay={0.6}>
+      <Reveal delay={0.6}>
         <div className="flex gap-4 pt-4">
           {socialLinks.slice(0, 3).map((social) => (
             <motion.a

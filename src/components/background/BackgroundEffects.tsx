@@ -1,9 +1,4 @@
-import { useLocation } from "react-router-dom";
-import { DotGrid, FloatingDecor } from "@/components/background/BackgroundDecor";
-
 export const BackgroundEffects = () => {
-  const { pathname } = useLocation();
-
   return (
     <>
       {/* Background Depth Elements */}
@@ -12,13 +7,13 @@ export const BackgroundEffects = () => {
         <div className="absolute bottom-[15%] right-[-5%] w-[25%] h-[25%] rounded-full bg-secondary/15 blur-[60px] animate-pulse delay-700" />
         <div className="absolute top-[30%] right-[15%] w-[20%] h-[20%] rounded-full bg-tertiary/10 blur-[40px] animate-pulse delay-1000" />
 
-        {/* Grain Texture */}
+        {/* Grain Texture - Disabled for performance */}
         {/* <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" /> */}
       </div>
 
       {/* Page Specific Decor Layer - Disabled for performance */}
       {/* <div className="fixed inset-0 z-[1] pointer-events-none">
-        {pathname === "/" ? <DotGrid /> : <FloatingDecor />}
+        ...
       </div> */}
     </>
   );

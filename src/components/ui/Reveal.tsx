@@ -6,10 +6,9 @@ interface Props {
   width?: "fit-content" | "100%";
   className?: string;
   delay?: number;
-  direction?: "up" | "down" | "left" | "right";
 }
 
-export const Reveal = ({ children, width = "fit-content", className, delay = 0.2, direction = "up" }: Props) => {
+export const Reveal = ({ children, width = "fit-content", className, delay = 0.2 }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();

@@ -13,7 +13,7 @@ export function AboutPage() {
       <section className="mx-auto max-w-7xl px-8" aria-labelledby="about-heading">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="w-full space-y-8 lg:w-1/2">
-            <Reveal direction="right">
+            <Reveal>
               <SectionHeading
                 as="h1"
                 titleId="about-heading"
@@ -23,7 +23,7 @@ export function AboutPage() {
               />
             </Reveal>
             
-            <Reveal direction="right" delay={0.4}>
+            <Reveal delay={0.4}>
               <p className="max-w-xl font-body text-xl leading-relaxed text-on-surface-variant">
                 {ABOUT_PAGE_COPY.story}
               </p>
@@ -31,7 +31,7 @@ export function AboutPage() {
 
             <div className="grid gap-4">
               {ABOUT_PAGE_COPY.highlights.map((highlight, i) => (
-                <Reveal key={highlight} direction="right" delay={0.5 + i * 0.1}>
+                <Reveal key={highlight} delay={0.5 + i * 0.1}>
                   <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-5 text-sm text-on-surface-variant backdrop-blur-md">
                     {highlight}
                   </div>
@@ -39,7 +39,7 @@ export function AboutPage() {
               ))}
             </div>
 
-            <Reveal direction="right" delay={0.8}>
+            <Reveal delay={0.8}>
               <div className="rounded-3xl border border-secondary/20 bg-secondary/5 p-8 backdrop-blur-md relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                    <MaterialIcon name="auto_awesome" className="text-4xl text-secondary" />
@@ -54,7 +54,7 @@ export function AboutPage() {
               </div>
             </Reveal>
 
-            <Reveal direction="right" delay={1}>
+            <Reveal delay={1}>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link
                   to="/contact"
@@ -73,7 +73,7 @@ export function AboutPage() {
           </div>
 
           <div className="relative w-full lg:w-1/2">
-            <Reveal direction="left" delay={0.6}>
+            <Reveal delay={0.6}>
               <TiltCard>
                 <div className="glass-card relative z-10 rotate-3 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl transition-transform duration-700 hover:rotate-0">
                   <img

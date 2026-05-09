@@ -40,7 +40,7 @@ export function ContactFormCard({
   onSubmit,
 }: ContactFormCardProps) {
   return (
-    <Reveal direction="left" delay={0.4}>
+    <Reveal delay={0.4}>
       <div className="relative">
         <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-primary/20 via-secondary/20 to-tertiary/20 opacity-30 blur-3xl" />
         <div className="glass-card rounded-[2.5rem] border border-white/10 bg-white/5 p-10 shadow-2xl backdrop-blur-2xl">

@@ -7,7 +7,7 @@ type HeroHeadlineProps = {
     hidden: { opacity: number };
     visible: {
       opacity: number;
-      transition: {
+      transition?: {
         staggerChildren: number;
         delayChildren: number;
       };
@@ -18,7 +18,7 @@ type HeroHeadlineProps = {
     visible: {
       opacity: number;
       y: number;
-      transition: {
+      transition?: {
         type: string;
         damping: number;
         stiffness: number;
