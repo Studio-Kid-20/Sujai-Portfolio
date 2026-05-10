@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CONTACT_PAGE_COPY } from "@/data/pages/contact";
+import { CONTACT_PAGE_COPY } from "../../data/pages/contact";
 
 export const contactFormSchema = z.object({
   name: z.string().min(2, "Name is too short").max(120),

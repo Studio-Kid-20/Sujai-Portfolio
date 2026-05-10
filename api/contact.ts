@@ -1,7 +1,7 @@
-import { randomUUID } from "node:crypto";
+import { randomUUID } from "crypto";
 
-import { contactMeta } from "../src/data/navigation.js";
-import { contactFormSchema, type ContactFormValues } from "../src/features/contact/contact.schema.js";
+import { contactMeta } from "../src/data/navigation";
+import { contactFormSchema, type ContactFormValues } from "../src/features/contact/contact.schema";
 
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
 const DEFAULT_FROM = "Sujai Portfolio <onboarding@resend.dev>";

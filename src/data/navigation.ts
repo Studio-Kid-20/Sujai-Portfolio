@@ -1,4 +1,4 @@
-import type { NavItem, SocialLink } from "@/types";
+import type { NavItem, SocialLink } from "../types";
 
 export const primaryNav: NavItem[] = [
   { label: "Home", to: "/", match: "exact" },
