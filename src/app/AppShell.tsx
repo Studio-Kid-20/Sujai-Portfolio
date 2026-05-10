@@ -8,13 +8,11 @@ import { SiteHeader } from "@/components/navigation/SiteHeader";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { resolveDocumentTitle } from "@/data/site";
 
-function pickFooterVariant(pathname: string): "home" | "default" {
-  return pathname === "/" ? "home" : "default";
-}
+
 
 export function AppShell() {
   const { pathname } = useLocation();
-  const footerVariant = pickFooterVariant(pathname);
+
 
   useEffect(() => {
     document.title = resolveDocumentTitle(pathname);
@@ -30,7 +28,7 @@ export function AppShell() {
         <div className="relative z-10 pb-24 pt-24 md:pb-8 md:pt-28">
           <Outlet />
         </div>
-        <SiteFooter variant={footerVariant} />
+        <SiteFooter />
         <MobileBottomNav />
       </div>
     </SmoothScroll>

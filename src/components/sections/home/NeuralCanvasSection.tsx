@@ -44,7 +44,7 @@ export function NeuralCanvasSection() {
 
           {/* Concentric Glow Rings - Re-centered and scaled up */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="h-[36rem] w-[36rem] rounded-full border border-primary/5 bg-primary/5 animate-pulse" />
+            <div className="h-[36rem] w-[36rem] rounded-full border border-primary/5 bg-primary/5 animate-pulse-slow" />
             <div className="absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/10 bg-primary/5" />
           </div>
 
@@ -60,11 +60,7 @@ export function NeuralCanvasSection() {
                   >
                     SUJAI
                   </span>
-                  <div className="mt-2 flex gap-1.5">
-                    <span className="h-1 w-1 rounded-full bg-primary animate-pulse" />
-                    <span className="h-1 w-1 rounded-full bg-secondary animate-pulse [animation-delay:0.2s]" />
-                    <span className="h-1 w-1 rounded-full bg-tertiary animate-pulse [animation-delay:0.4s]" />
-                  </div>
+                  {/* Dots removed as requested */}
                 </div>
               </div>
             </div>
@@ -78,7 +74,6 @@ export function NeuralCanvasSection() {
               const cp2x = isLeft ? 50 - 20 : 50 + 20;
               
               const pathD = `M ${node.x} ${node.y} C ${cp1x} ${node.y}, ${cp2x} 50, 50 50`;
-              const reversedPathD = `M 50 50 C ${cp2x} 50, ${cp1x} ${node.y}, ${node.x} ${node.y}`;
 
               return (
                 <g key={`flow-${node.id}`}>
@@ -91,21 +86,7 @@ export function NeuralCanvasSection() {
                     className="animate-flow-dash"
                   />
                   {/* Traveling Particle */}
-                  <circle r="0.4" fill={accentColors[node.accent]}>
-                    <animateMotion
-                      dur={`${3 + Math.random() * 3}s`}
-                      repeatCount="indefinite"
-                      path={reversedPathD}
-                      calcMode="spline"
-                      keySplines="0.4 0 0.2 1"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0;1;1;0"
-                      dur={`${3 + Math.random() * 3}s`}
-                      repeatCount="indefinite"
-                    />
-                  </circle>
+                  {/* Traveling Particle removed as requested */}
                 </g>
               );
             })}
@@ -158,7 +139,7 @@ export function NeuralCanvasSection() {
         {/* Description Text Section */}
         <div className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-2">
           <div>
-            <h2 className="title-gradient font-jersey25 text-3xl font-black leading-tight md:text-4xl">
+            <h2 className="title-gradient text-3xl font-black leading-tight md:text-4xl">
               Auto-structured process <br /> for the modern web.
             </h2>
           </div>

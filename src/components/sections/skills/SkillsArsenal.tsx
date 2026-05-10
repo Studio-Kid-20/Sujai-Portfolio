@@ -55,7 +55,7 @@ export function SkillsArsenal() {
                 }`}>
                 <MaterialIcon name={cat.icon} className="text-2xl" />
               </div>
-              <h3 className="font-jersey25 text-3xl font-bold text-white">{cat.title}</h3>
+              <h3 className="text-3xl font-bold text-white">{cat.title}</h3>
             </div>
 
             {cat.bars && (

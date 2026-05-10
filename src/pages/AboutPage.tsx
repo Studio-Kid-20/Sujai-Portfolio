@@ -45,7 +45,7 @@ export function AboutPage() {
                    <MaterialIcon name="auto_awesome" className="text-4xl text-secondary" />
                 </div>
                 <p className="font-label text-xs uppercase tracking-[0.2em] text-secondary">Milestone</p>
-                <h2 className="title-gradient mt-3 font-jersey25 text-3xl font-bold">
+                <h2 className="title-gradient mt-3 text-3xl font-bold">
                   {ABOUT_PAGE_COPY.milestone.title}
                 </h2>
                 <p className="mt-3 font-jersey20 text-base leading-relaxed text-on-surface-variant">

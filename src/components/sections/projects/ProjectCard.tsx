@@ -40,7 +40,7 @@ export function ProjectCard({ project }: ProjectDevCardProps) {
           ))}
         </div>
         
-        <h3 className="mb-2 min-h-[4rem] font-jersey25 text-3xl font-bold text-white transition-colors group-hover:text-primary line-clamp-2">
+        <h3 className="mb-2 min-h-[4rem] text-3xl font-bold text-white transition-colors group-hover:text-primary line-clamp-2">
           {project.title}
         </h3>
         

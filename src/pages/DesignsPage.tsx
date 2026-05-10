@@ -32,7 +32,7 @@ export function DesignsPage() {
               <p className="mb-1 font-label text-[10px] font-bold uppercase tracking-widest text-secondary">
                 {tile.label || "Exploration"}
               </p>
-              <h2 className="title-gradient font-jersey25 text-2xl font-bold">{tile.title}</h2>
+              <h2 className="title-gradient text-2xl font-bold">{tile.title}</h2>
               {tile.subtitle ? (
                 <p className="mt-2 font-jersey20 text-base text-on-surface-variant light:text-slate-600">{tile.subtitle}</p>
               ) : null}

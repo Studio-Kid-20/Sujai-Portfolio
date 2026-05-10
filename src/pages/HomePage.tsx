@@ -19,7 +19,7 @@ export function HomePage() {
             titleId="skills-heading"
             title={HOME_SECTION_COPY.skills.title}
             description={HOME_SECTION_COPY.skills.description}
-            titleClassName="text-3xl md:text-4xl font-jersey25"
+            titleClassName="text-3xl md:text-4xl"
             descriptionClassName="font-jersey20"
           />
           <div className="mt-10">
@@ -33,7 +33,7 @@ export function HomePage() {
             titleId="projects-heading"
             title={HOME_SECTION_COPY.projects.title}
             description={HOME_SECTION_COPY.projects.description}
-            titleClassName="text-3xl md:text-4xl font-jersey25"
+            titleClassName="text-3xl md:text-4xl"
             descriptionClassName="font-jersey20"
           />
 
@@ -53,7 +53,7 @@ export function HomePage() {
             titleId="visual-heading"
             title={HOME_SECTION_COPY.explorations.title}
             description={HOME_SECTION_COPY.explorations.description}
-            titleClassName="text-3xl md:text-4xl font-jersey25"
+            titleClassName="text-3xl md:text-4xl"
             descriptionClassName="font-jersey20"
           />
           <div className="mt-10">

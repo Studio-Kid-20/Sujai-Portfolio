@@ -48,7 +48,7 @@ export function VisualExplorationsGrid() {
                 <span className="mb-3 block font-label text-xs font-bold uppercase tracking-[0.2em] text-secondary">
                   {fintech.label}
                 </span>
-                <h3 className="title-gradient mb-4 font-jersey25 text-3xl font-bold md:text-5xl">
+                <h3 className="title-gradient mb-4 text-3xl font-bold md:text-5xl">
                   {fintech.title}
                 </h3>
                 <p className="mb-6 max-w-md text-sm leading-relaxed text-on-surface-variant md:text-base">
@@ -78,7 +78,7 @@ export function VisualExplorationsGrid() {
                 <span className="mb-2 block font-label text-[10px] font-bold uppercase tracking-[0.2em] text-tertiary">
                   {blueprints.label}
                 </span>
-                <h3 className="title-gradient font-jersey25 text-2xl font-bold md:text-3xl">{blueprints.title}</h3>
+                <h3 className="title-gradient text-2xl font-bold md:text-3xl">{blueprints.title}</h3>
                 <p className="mt-3 max-w-sm text-sm leading-relaxed text-on-surface-variant">
                   {blueprints.subtitle}
                 </p>
@@ -99,7 +99,7 @@ export function VisualExplorationsGrid() {
             )}
             <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
               <div>
-                <h3 className="title-gradient font-jersey25 text-xl font-bold">{brand.title}</h3>
+                <h3 className="title-gradient text-xl font-bold">{brand.title}</h3>
                 <p className="mt-2 font-label text-[10px] uppercase tracking-wider text-on-surface-variant">{brand.subtitle}</p>
               </div>
             </div>
@@ -120,7 +120,7 @@ export function VisualExplorationsGrid() {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md">
                 <MaterialIcon name="motion_mode" className="text-2xl text-white" />
               </div>
-              <h3 className="title-gradient font-jersey25 text-xl font-bold">{motionTile.title}</h3>
+              <h3 className="title-gradient text-xl font-bold">{motionTile.title}</h3>
               <p className="mt-2 font-label text-[10px] uppercase tracking-wider text-on-surface-variant">{motionTile.subtitle}</p>
             </div>
           </div>
