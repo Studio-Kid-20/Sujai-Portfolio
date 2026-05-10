@@ -1,7 +1,25 @@
 import { randomUUID } from "crypto";
 
-import { contactMeta } from "../src/data/navigation";
-import { contactFormSchema, type ContactFormValues } from "../src/features/contact/contact.schema";
+import { z } from "zod";
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, "Name is too short").max(120),
+  email: z.string().email("Enter a valid email"),
+  subject: z.enum([
+    "Project Inquiry",
+    "General Freelance",
+    "Collaboration",
+    "Just Saying Hi",
+  ]),
+  message: z.string().min(10, "Message is too short").max(5000),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
+
+const contactMeta = {
+  email: "ds.sujais2010@gmail.com",
+  location: "India / Remote-friendly",
+};
 
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
 const DEFAULT_FROM = "Sujai Portfolio <onboarding@resend.dev>";
